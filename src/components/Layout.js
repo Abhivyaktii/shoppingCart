@@ -2,8 +2,9 @@ import React from "react";
 import Header from "./Header";
 import Products from "./Products";
 import "./Layout.css";
+import { useSelector } from "react-redux";
 const Layout = () => {
-  let total = 100;
+  let total = useSelector((state=>state.cart.total));
 
   return (
     <React.Fragment>

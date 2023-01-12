@@ -1,4 +1,5 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import Product from "./Product";
 const DUMMY_PRODUCTS = [
   {
@@ -38,6 +39,8 @@ const DUMMY_PRODUCTS = [
   },
 ];
 const Products = () => {
+  const cartItems = useSelector((state => state.cart.itemsList))
+  console.log(cartItems);
   return (
     <div>
       <ul className="products-container">
