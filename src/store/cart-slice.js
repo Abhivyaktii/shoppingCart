@@ -20,6 +20,7 @@ const cartSlice= createSlice({
                 state.total+=newItem.price
                 console.log(existingItem.totalPrice);
                 console.log("^^^^^^^^^",state.total);
+                window.alert("already in cart");
             }
             else{
                 state.itemsList.push({
