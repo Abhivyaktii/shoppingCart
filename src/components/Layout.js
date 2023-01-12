@@ -3,6 +3,7 @@ import Header from "./Header";
 import Products from "./Products";
 import "./Layout.css";
 import { useSelector } from "react-redux";
+import CartItems from "./CartItems";
 const Layout = () => {
   let total = useSelector((state=>state.cart.total));
 
@@ -11,6 +12,7 @@ const Layout = () => {
       <div className="layout">
         <Header />
         <Products />
+        <CartItems/>
         <div className="total-price">
           <h3>Total: ${total}</h3>
           <button className="orderBtn">Place Order</button>

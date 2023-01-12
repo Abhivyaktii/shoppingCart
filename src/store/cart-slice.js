@@ -18,9 +18,7 @@ const cartSlice= createSlice({
                 existingItem.quantity++
                 existingItem.totalPrice+=newItem.price
                 state.total+=newItem.price
-                console.log(existingItem.totalPrice);
-                console.log("^^^^^^^^^",state.total);
-                window.alert("already in cart");
+                console.log(state.itemsList);
             }
             else{
                 state.itemsList.push({
